@@ -12,11 +12,20 @@ whichset = 'spec'
 if whichset == 'spec':
     #specmag = input('Please input magnitude from options above: ')
     #spectime = input('Please input time from options above: ')
-    specmag = '4.5'
+    specmag = '2.5'
     spectime = 'hour'
     
 	##Call function for downloading data here, followed by plotting
     dataset = csv_loader(specmag,spectime)
-	
+    test = "start"
+    for row in dataset:
+        #print(row)  
+        #print(type(row))
+        if row != []:
+            test = test+row[0]
+        #print(type(row[0]))
+        #print(row[0])		
+        #test = test+row[0]
+    print(test)
 #else
     ##Call function in loop to download all data, then call to plot 
