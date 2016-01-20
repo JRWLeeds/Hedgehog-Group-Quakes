@@ -7,6 +7,6 @@ def csv_loader(mag,time):
     url= urlbase+mag+'_'+time+'.csv' 
     response = urllib.request.urlopen(url)
     cr = csv.reader(response)
-
+    return cr
 
 
